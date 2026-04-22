@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Camiones Profesionales | CamionesAtlas.com</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Paleta de Colores y Variables --- */
+        :root {
+            --gris-oscuro: #212529; /* Fondo principal y texto */
+            --gris-medio: #343a40;
+            --blanco: #ffffff; /* Texto sobre fondo oscuro */
+            --naranja-accion: #fd7e14; /* Botones y acentos */
+            --naranja-hover: #e06b0f;
+            --texto-cuerpo: #dddddd;
+            
+            /* Tipografía */
+            --fuente-titulos: 'Oswald', sans-serif;
+            --fuente-cuerpo: 'Roboto', sans-serif;
+        }
+
+        /* --- Estilos Globales --- */
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--texto-cuerpo);
+            background-color: var(--gris-oscuro);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--fuente-titulos);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--blanco);
+        }
+
+        /* --- Estructura Semántica --- */
+        header {
+            background-color: var(--gris-medio);
+            padding: 1rem 2rem;
+            border-bottom: 3px solid var(--naranja-accion);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--naranja-accion);
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto; /* Centrar contenido */
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        /* --- Sección Hero (Título Principal) --- */
+        #hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* --- Grid de Catálogo --- */
+        .grid-camiones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .tarjeta-camion {
+            background-color: var(--gris-medio);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #444;
+            text-align: center;
+        }
+
+        /* Imagen placeholder con CSS (ya que no tenemos archivos de imagen) */
+        .imagen-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            color: #888;
+            font-weight: bold;
+        }
+
+        .tarjeta-camion h3 {
+            margin-top: 0;
+            color: var(--blanco);
+        }
+
+        /* --- Botón de Acción SEO Friendly --- */
+        .btn-contacto {
+            display: inline-block;
+            background-color: var(--naranja-accion);
+            color: var(--gris-oscuro);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-family: var(--fuente-titulos);
+            font-weight: 700;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-contacto:hover {
+            background-color: var(--naranja-hover);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CamionesAtlas.com</h1>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Venta de Camiones de Ocasión y Nuevos</h2>
+            <p>Encuentra la potencia y fiabilidad que tu negocio necesita. Entrega inmediata en toda España.</p>
+        </section>
+
+        <section id="catalogo">
+            <h2>Nuestras Ofertas Destacadas</h2>
+            
+            <div class="grid-camiones">
+                <article class="tarjeta-camion">
+                    <div class="imagen-placeholder">FOTO CAMIÓN 1</div>
+                    <h3>Volvo FH16</h3>
+                    <p>Año 2021 | 120,000 km | Tractor</p>
+                    <a href="#" class="btn-contacto">Ver Detalles</a>
+                </article>
+
+                <article class="tarjeta-camion">
+                    <div class="imagen-placeholder">FOTO CAMIÓN 2</div>
+                    <h3>Mercedes Actros</h3>
+                    <p>Año 2020 | 250,000 km | Rígido</p>
+                    <a href="#" class="btn-contacto">Ver Detalles</a>
+                </article>
+
+                <article class="tarjeta-camion">
+                    <div class="imagen-placeholder">FOTO CAMIÓN 3</div>
+                    <h3>Scania R500</h3>
+                    <p>Nuevo | 0 km | Tractor</p>
+                    <a href="#" class="btn-contacto">Ver Detalles</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>¿No encuentras lo que buscas?</h2>
+            <p>Contáctanos y te ayudamos a encontrar el camión perfecto para tu flota.</p>
+            <a href="mailto:ventas@camionesatlas.com" class="btn-contacto">Solicitar Presupuesto</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CamionesAtlas S.L. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
