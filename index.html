@@ -3,186 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venta de Camiones Profesionales | CamionesAtlas.com</title>
+    <meta name="description" content="Líderes en venta de camiones de ocasión, cabezas tractoras y vehículos industriales en España. Flota revisada y financiación a medida.">
+    <title>Venta de Camiones de Ocasión y Nuevos | CamionesAtlas.com</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- Paleta de Colores y Variables --- */
         :root {
-            --gris-oscuro: #212529; /* Fondo principal y texto */
-            --gris-medio: #343a40;
-            --blanco: #ffffff; /* Texto sobre fondo oscuro */
-            --naranja-accion: #fd7e14; /* Botones y acentos */
-            --naranja-hover: #e06b0f;
-            --texto-cuerpo: #dddddd;
-            
-            /* Tipografía */
+            --gris-oscuro: #1a1d20;
+            --gris-medio: #2b3035;
+            --gris-claro: #495057;
+            --blanco: #ffffff;
+            --naranja-accion: #f16e03;
+            --naranja-hover: #d35f00;
+            --texto-cuerpo: #e9ecef;
             --fuente-titulos: 'Oswald', sans-serif;
             --fuente-cuerpo: 'Roboto', sans-serif;
         }
 
-        /* --- Estilos Globales --- */
-        body {
-            font-family: var(--fuente-cuerpo);
-            color: var(--texto-cuerpo);
-            background-color: var(--gris-oscuro);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+        body { font-family: var(--fuente-cuerpo); color: var(--texto-cuerpo); background-color: var(--gris-oscuro); margin: 0; line-height: 1.6; }
+        h1, h2, h3 { font-family: var(--fuente-titulos); font-weight: 700; text-transform: uppercase; color: var(--blanco); letter-spacing: 1px; }
+        
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-        h1, h2, h3 {
-            font-family: var(--fuente-titulos);
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--blanco);
-        }
+        /* --- Header --- */
+        header { background-color: var(--gris-medio); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--naranja-accion); position: sticky; top: 0; z-index: 100; }
+        header h1 { margin: 0; font-size: 1.8rem; color: var(--naranja-accion); }
+        header nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.5rem; }
+        header nav a:hover { color: var(--naranja-accion); }
 
-        /* --- Estructura Semántica --- */
-        header {
-            background-color: var(--gris-medio);
-            padding: 1rem 2rem;
-            border-bottom: 3px solid var(--naranja-accion);
-        }
+        main { max-width: 1200px; margin: 0 auto; padding: 2rem 5%; }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: var(--naranja-accion);
-        }
+        /* --- Hero Section --- */
+        #hero { text-align: center; padding: 4rem 0; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1600') no-repeat center center/cover; border-radius: 8px; margin-bottom: 3rem; }
+        #hero h2 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        #hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem auto; color: var(--blanco); }
 
-        main {
-            padding: 2rem;
-            max-width: 1000px;
-            margin: 0 auto; /* Centrar contenido */
-        }
+        /* --- Catálogo Grid --- */
+        .grid-camiones { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .tarjeta-camion { background-color: var(--gris-medio); border-radius: 8px; overflow: hidden; border: 1px solid #3d4349; transition: transform 0.3s ease; }
+        .tarjeta-camion:hover { transform: translateY(-5px); border-color: var(--naranja-accion); }
+        .tarjeta-camion img { width: 100%; height: 200px; object-fit: cover; }
+        .tarjeta-info { padding: 1.5rem; }
+        .tarjeta-info h3 { margin-top: 0; font-size: 1.4rem; border-bottom: 1px solid #3d4349; padding-bottom: 0.5rem; }
+        .detalles-tecnicos { list-style: none; padding: 0; margin: 1rem 0; font-size: 0.9rem; color: #ced4da; }
+        .detalles-tecnicos li { margin-bottom: 0.3rem; }
+        .precio { font-family: var(--fuente-titulos); font-size: 1.5rem; color: var(--naranja-accion); margin-bottom: 1rem; display: block; }
 
-        section {
-            margin-bottom: 3rem;
-        }
+        /* --- Sección Valor --- */
+        #por-que-elegirnos { background-color: var(--gris-medio); padding: 3rem; border-radius: 8px; margin: 3rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .valor-item { text-align: center; }
+        .valor-item h3 { color: var(--naranja-accion); }
 
-        /* --- Sección Hero (Título Principal) --- */
-        #hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
+        /* --- Botones --- */
+        .btn { display: inline-block; padding: 0.8rem 1.8rem; font-family: var(--fuente-titulos); font-weight: 700; text-transform: uppercase; border-radius: 4px; cursor: pointer; border: none; font-size: 1rem; }
+        .btn-principal { background-color: var(--naranja-accion); color: var(--gris-oscuro); }
+        .btn-principal:hover { background-color: var(--naranja-hover); }
+        .btn-secundario { background-color: transparent; border: 2px solid var(--blanco); color: var(--blanco); }
+        .btn-secundario:hover { background-color: var(--blanco); color: var(--gris-oscuro); }
+        .btn-tarjeta { width: 100%; text-align: center; padding: 0.6rem; font-size: 0.9rem; }
 
-        #hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-        }
-
-        /* --- Grid de Catálogo --- */
-        .grid-camiones {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .tarjeta-camion {
-            background-color: var(--gris-medio);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #444;
-            text-align: center;
-        }
-
-        /* Imagen placeholder con CSS (ya que no tenemos archivos de imagen) */
-        .imagen-placeholder {
-            width: 100%;
-            height: 150px;
-            background-color: #555;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-            color: #888;
-            font-weight: bold;
-        }
-
-        .tarjeta-camion h3 {
-            margin-top: 0;
-            color: var(--blanco);
-        }
-
-        /* --- Botón de Acción SEO Friendly --- */
-        .btn-contacto {
-            display: inline-block;
-            background-color: var(--naranja-accion);
-            color: var(--gris-oscuro);
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            font-family: var(--fuente-titulos);
-            font-weight: 700;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-            text-transform: uppercase;
-        }
-
-        .btn-contacto:hover {
-            background-color: var(--naranja-hover);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            border-top: 1px solid #444;
+        footer { text-align: center; padding: 3rem 5%; background-color: #111; border-top: 1px solid #333; font-size: 0.9rem; color: #888; }
+        
+        @media (max-width: 768px) {
+            #hero h2 { font-size: 2.2rem; }
+            header { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>CamionesAtlas.com</h1>
+        <h1>CamionesAtlas</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#por-que-elegirnos">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section id="hero">
-            <h2>Venta de Camiones de Ocasión y Nuevos</h2>
-            <p>Encuentra la potencia y fiabilidad que tu negocio necesita. Entrega inmediata en toda España.</p>
+            <h2>Potencia Rentable para tu Negocio</h2>
+            <p>Especialistas en cabezas tractoras y camiones rígidos revisados. Garantía europea y financiación inmediata.</p>
+            <a href="#catalogo" class="btn btn-principal">Ver Inventario</a>
+            <a href="#contacto" class="btn btn-secundario">Solicitar Cita</a>
         </section>
 
         <section id="catalogo">
-            <h2>Nuestras Ofertas Destacadas</h2>
+            <h2>Destacados de la Semana</h2>
+            <p style="margin-bottom: 2rem;">Explora nuestra selección premium de vehículos industriales listos para trabajar.</p>
             
             <div class="grid-camiones">
                 <article class="tarjeta-camion">
-                    <div class="imagen-placeholder">FOTO CAMIÓN 1</div>
-                    <h3>Volvo FH16</h3>
-                    <p>Año 2021 | 120,000 km | Tractor</p>
-                    <a href="#" class="btn-contacto">Ver Detalles</a>
+                    <img src="https://images.unsplash.com/photo-1586191582159-66551054a7f3?q=80&w=600" alt="Cabeza tractora Volvo FH16 color azul impecable">
+                    <div class="tarjeta-info">
+                        <h3>Volvo FH16 750</h3>
+                        <span class="precio">65.900 € <span style="font-size:0.8rem; color:#888;">(IVA no incl.)</span></span>
+                        <ul class="detalles-tecnicos">
+                            <li><strong>Año:</strong> 2021</li>
+                            <li><strong>Kilómetros:</strong> 215.000 km</li>
+                            <li><strong>Configuración:</strong> 4x2 Cabeza Tractora</li>
+                            <li><strong>Potencia:</strong> 750 CV | Euro 6</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-principal btn-tarjeta">Solicitar Información</a>
+                    </div>
                 </article>
 
                 <article class="tarjeta-camion">
-                    <div class="imagen-placeholder">FOTO CAMIÓN 2</div>
-                    <h3>Mercedes Actros</h3>
-                    <p>Año 2020 | 250,000 km | Rígido</p>
-                    <a href="#" class="btn-contacto">Ver Detalles</a>
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=600" alt="Camión rígido Mercedes-Benz Actros blanco con caja cerrada">
+                    <div class="tarjeta-info">
+                        <h3>Mercedes Actros 2545</h3>
+                        <span class="precio">58.000 €</span>
+                        <ul class="detalles-tecnicos">
+                            <li><strong>Año:</strong> 2020</li>
+                            <li><strong>Kilómetros:</strong> 310.000 km</li>
+                            <li><strong>Configuración:</strong> 6x2 Rígido Tauliner</li>
+                            <li><strong>Potencia:</strong> 450 CV</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-principal btn-tarjeta">Solicitar Información</a>
+                    </div>
                 </article>
 
                 <article class="tarjeta-camion">
-                    <div class="imagen-placeholder">FOTO CAMIÓN 3</div>
-                    <h3>Scania R500</h3>
-                    <p>Nuevo | 0 km | Tractor</p>
-                    <a href="#" class="btn-contacto">Ver Detalles</a>
+                    <img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?q=80&w=600" alt="Cabeza tractora Scania R500 roja nueva en concesionario">
+                    <div class="tarjeta-info">
+                        <h3>Scania R500 Streamline</h3>
+                        <span class="precio">Consultar Precio</span>
+                        <ul class="detalles-tecnicos">
+                            <li><strong>Año:</strong> Nuevo</li>
+                            <li><strong>Kilómetros:</strong> 0 km</li>
+                            <li><strong>Configuración:</strong> 4x2 Retarder</li>
+                            <li><strong>Potencia:</strong> 500 CV</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-principal btn-tarjeta">Ver Detalles</a>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section id="contacto">
-            <h2>¿No encuentras lo que buscas?</h2>
-            <p>Contáctanos y te ayudamos a encontrar el camión perfecto para tu flota.</p>
-            <a href="mailto:ventas@camionesatlas.com" class="btn-contacto">Solicitar Presupuesto</a>
+        <section id="por-que-elegirnos">
+            <div class="valor-item">
+                <h3>+150 Vehículos</h3>
+                <p>Amplio stock permanente de las principales marcas: Volvo, Scania, Mercedes, MAN.</p>
+            </div>
+            <div class="valor-item">
+                <h3>Revisión Certificada</h3>
+                <p>Cada camión pasa un check-list de 120 puntos antes de la venta.</p>
+            </div>
+            <div class="valor-item">
+                <h3>Financiación 24h</h3>
+                <p>Aprobación rápida de leasing y renting para autónomos y flotas.</p>
+            </div>
+        </section>
+
+        <section id="contacto" style="text-align: center; padding: 3rem 0;">
+            <h2>¿Listo para renovar tu flota?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto;">Déjanos tus datos o llámanos. Nuestros asesores técnicos te ayudarán a encontrar el vehículo industrial con el mejor TCO (Total Cost of Ownership) para tu ruta.</p>
+            <a href="tel:+34900000000" class="btn btn-principal" style="font-size: 1.2rem;">📞 900 000 000</a>
+            <p style="margin-top: 1rem;">O envíanos un email a: <a href="mailto:ventas@camionesatlas.com" style="color:var(--naranja-accion);">ventas@camionesatlas.com</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 CamionesAtlas S.L. Todos los derechos reservados.</p>
+        <p><strong>CamionesAtlas S.L.</strong> - Especialistas en Transporte Pesado.</p>
+        <p>Calle del Transporte industrial, 42, 28000 Madrid.</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
     </footer>
 
 </body>
